@@ -1,36 +1,39 @@
 ---
 layout: page
-description: "A Clean Blog Theme by Start Bootstrap"
+description: "A mongodb web client ."
+header-img: "img/home-bg.jpg"
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
-{% endfor %}
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+          <section class="supported-os">
+            <div class="os">
+              <div class="osx">OSX</div>
+              <div class="linux">Linux</div>
+              <div class="windows">Windows</div>
+            </div>
+          </section>
+
+          <section>
+            <aside>
+              <h1 id="features">Features</h1>
+            </aside>
+            <div class="features cols-3">
+              <div class="col">
+                <h3>Cross-platform</h3>
+                <p>Mgweb runs on OSX, Linux and Windows operating systems without a hustle. Binaries are cross-complied with Go and available for 32/64 bit systems. You can even run it on RaspberryPi</p>
+              </div>
+              <div class="col">
+                <h3>Easy to Install</h3>
+                <p>Mgweb comes as a single binary file that's ready to go. You can install it manually, via Docker or using Homebrew on OSX which is updated regularly and is super convenient.</p>
+              </div>
+              <div class="col">
+                <h3>Zero Dependencies</h3>
+                <p>No need to install anything on your machines or services. Just download and run. To get started Mgweb just needs a browser and a Mongodb server to connect to.</p>
+              </div>
+              <div class="col">
+                <h3>Simple and Clean</h3>
+                <p>Mgweb was designed to be very simple and clean UI to browse or edit collections.</p>
+              </div>
+            </div>
+          </section>
+
